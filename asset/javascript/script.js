@@ -60,8 +60,9 @@ var questionArr = [{
 
 //reset timer and result for user to play again
 function reset() {
-    timeLeft = 20;
+    timeLeft = 60;
     $('#timer').hide();
+    $("#timer").css("color","rgb(0, 0, 0)");
     $("#timer").text("Time: " + timeLeft);
     $('#initialMsg').hide();
     score = 0;
