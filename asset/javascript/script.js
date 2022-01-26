@@ -73,17 +73,28 @@ function reset() {
 function countdown() {
     $('#timer').show();
     var timeInterval = setInterval(function() {
-        timeLeft--;
-        $("#timer").text("Time: " + timeLeft);
-        console.log(timeLeft);
-        if (timeLeft<6) {
-            $("#timer").css("color","rgb(165, 40, 40)");
-        }
-        if (timeLeft<1) {
-            $("#timer").text("Time's up!");
+        if (id<6) {
+            timeLeft--;
+            $("#timer").text("Time: " + timeLeft);
+            console.log(timeLeft);
+            if (timeLeft<6) {
+                $("#timer").css("color","rgb(165, 40, 40)");
+            }
+            if (timeLeft<1) {
+                $("#timer").text("Time's up! Your score is: " + score);
+                clearInterval(timeInterval);
+                $("#question-container").css("display", "none");
+                $("#submit-score").css("display", "flex");
+            }
+        } else {
             clearInterval(timeInterval);
             $("#question-container").css("display", "none");
             $("#submit-score").css("display", "flex");
+            console.log(score);
+            console.log(timeLeft);
+            score = score + timeLeft;
+            console.log(score);
+            $("#timer").text("You finish all questions! Your score is: " + score);
         }
     }, 1000);
 }
@@ -108,9 +119,11 @@ function questionPrompt(id) {
 function showNextQuestion() {
     questionPrompt(0);
     $('.answer').on("click", function(event) {
-        checkAnswer(event);
-        id++;
-        questionPrompt(id);
+        if (id<6) {
+            checkAnswer(event);
+            id++;
+            questionPrompt(id);
+        } 
     });
 }
 
