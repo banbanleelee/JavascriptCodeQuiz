@@ -7,7 +7,7 @@ Generate a timed quiz for user to test their capabilities. It also will store a 
 ## User Journey
 When the user goes to this website, they will be prompted to view history scores and start the code quiz.
 
-<img src="./asset/image/step1.png">
+![Step 1](./asset/image/step1.png)
 
 If the user clicks the highscore page without playing a game, the local storage of history data will be empty, and the user will be prompted to play one game first.
 
