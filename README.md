@@ -43,6 +43,7 @@ After the user submits the score, he/she will go back to the main screen, and th
 
 ## Links
 Deployed Page: https://banbanleelee.github.io/JavascriptCodeQuiz/
+
 GitHub Repository: https://github.com/banbanleelee/JavascriptCodeQuiz
 
 ## License
