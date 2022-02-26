@@ -3,11 +3,9 @@
 ## Overview
 Generate a timed quiz for user to test their capabilities. It also will store a score in the local storage for users to review.
 
-------
 ##Technology Used
 HTML, CSS,  JavaScript, Bootstrap, jQuery
 
-------
 
 ## User Journey
 When the user goes to this website, they will be prompted to view history scores and start the code quiz.
@@ -42,6 +40,6 @@ After the user submits the score, he/she will go back to the main screen, and th
 
 ![](/asset/image/step8.PNG)
 
-------
+
 ## Deployed Application
 https://banbanleelee.github.io/JavascriptCodeQuiz/
